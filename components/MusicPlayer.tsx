@@ -7,7 +7,7 @@ export const MusicPlayer: React.FC = () => {
   
   // Link nhạc Demo (Bạn có thể thay thế bằng link mp3 nhạc Tết khác)
   // Sử dụng nhạc không bản quyền vui tươi cho không khí Tết
-  const musicUrl = "https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3"; 
+  const musicUrl = "https://dinhtho.com.vn/wp-content/uploads/2025/12/nhac-tet-tui-2026.mp3"; 
 
   const togglePlay = () => {
     if (audioRef.current) {

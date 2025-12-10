@@ -2,7 +2,8 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Added viewport-fit=cover for notch devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     
     <!-- Primary Meta Tags -->
     <title>Chụp Ảnh Áo Dài Tết 2026 | Tho Nguyen Photography</title>
@@ -10,6 +11,7 @@
     <meta name="description" content="Dịch vụ chụp ảnh áo dài Tết 2026 chuyên nghiệp tại Sài Gòn & Quy Nhơn. Gói chụp trọn gói 1.200k, thợ vui tính, hình đẹp lung linh. Đặt lịch ngay để nhận ưu đãi!">
     <meta name="keywords" content="chụp ảnh tết 2026, chụp áo dài tết, chụp ảnh sài gòn, chụp ảnh quy nhơn, tho nguyen photography, studio tết, chụp hình xuân">
     <meta name="author" content="Tho Nguyen Photography">
+    <meta name="theme-color" content="#D90429">
 
     <!-- Open Graph / Facebook / Zalo -->
     <meta property="og:type" content="website">
@@ -23,6 +25,9 @@
     <meta property="twitter:title" content="Chụp Ảnh Áo Dài Tết 2026 | Tho Nguyen Photography">
     <meta property="twitter:description" content="Trọn gói chỉ 1.200k - Chụp tại TP.HCM & Quy Nhơn. Ảnh đẹp, thợ vui, giao file nhanh.">
     <meta property="twitter:image" content="https://picsum.photos/seed/tet2026cover/1200/630">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
@@ -70,6 +75,47 @@
       html {
         scroll-behavior: smooth;
       }
+      
+      /* Preloader Styles */
+      .initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #FDFCF6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      }
+      .spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid rgba(217, 4, 41, 0.1);
+        border-left-color: #D90429;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      .loading-text {
+        font-family: 'Playfair Display', serif;
+        color: #D90429;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
     </style>
     <script type="importmap">
     {
@@ -83,6 +129,12 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Preloader Content (Visible while React loads) -->
+      <div class="initial-loader">
+        <div class="spinner"></div>
+        <div class="loading-text">THO NGUYEN</div>
+      </div>
+    </div>
   </body>
 </html>

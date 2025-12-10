@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-  "https://picsum.photos/seed/tet2026v1/600/800",
-  "https://picsum.photos/seed/tet2026v2/600/800",
-  "https://picsum.photos/seed/tet2026v3/600/800",
-  "https://picsum.photos/seed/tet2026v4/600/800",
+  "https://dinhtho.com.vn/wp-content/uploads/2025/12/ao-dia-6.jpg",
+  "https://dinhtho.com.vn/wp-content/uploads/2025/12/ao-dai-7.jpg",
+  "https://dinhtho.com.vn/wp-content/uploads/2025/12/ao-dai-9.jpg",
+  "https://dinhtho.com.vn/wp-content/uploads/2025/12/ao-dia-tet-1.jpg",
 ];
 
 export const ImageCarousel: React.FC = () => {

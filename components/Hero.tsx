@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 opacity-10 animate-pulse">
         <img 
-          src="https://picsum.photos/1920/1080?grayscale" 
+          src="https://dinhtho.com.vn/wp-content/uploads/2025/12/cho-ben-thanh-ao-dai.jpg" 
           alt="Ao Dai Tet Background" 
           className="w-full h-full object-cover"
         />

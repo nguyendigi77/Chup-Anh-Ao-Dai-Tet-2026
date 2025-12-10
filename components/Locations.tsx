@@ -71,7 +71,7 @@ export const Locations: React.FC = () => {
              <RevealOnScroll delay={300} className="hidden md:block">
                <div className="mt-4 rounded-2xl overflow-hidden aspect-[4/3] relative group shadow-lg">
                    <img 
-                      src={activeTab === 'hcm' ? "https://picsum.photos/600/800?random=1" : "https://picsum.photos/600/800?random=2"} 
+                      src={activeTab === 'hcm' ? "https://dinhtho.com.vn/wp-content/uploads/2025/12/AO-DAI-VUONG-2.jpg?random=1" : "https://dinhtho.com.vn/wp-content/uploads/2025/12/AO-DAI-VUONG-1.jpg?random=2"} 
                       alt="Location Preview" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                    />

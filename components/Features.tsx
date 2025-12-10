@@ -67,7 +67,7 @@ export const Features: React.FC = () => {
                <div className="absolute inset-0 bg-tetGold transform rotate-6 rounded-3xl opacity-20 group-hover:rotate-12 transition-transform duration-500"></div>
                <div className="relative rounded-3xl shadow-2xl w-full aspect-square overflow-hidden border-4 border-white">
                  <img 
-                   src="https://dinhtho.com.vn/wp-content/uploads/2025/12/ao-dai-10.jpg" 
+                   src="https://dinhtho.com.vn/wp-content/uploads/2025/12/AO-DAI-VUONG-3.jpg" 
                    alt="Ao Dai Tet 2026" 
                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  />
